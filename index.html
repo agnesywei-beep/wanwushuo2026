@@ -3,48 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>万物赞颂歌 - 歌词投影</title>
+    <title>万物赞颂歌 - 目录</title>
     <style>
         body {
             background-color: #000000;
             color: #ffffff;
             font-family: sans-serif;
-            font-size: 64px;
-            line-height: 1.8;
             text-align: center;
             padding: 40px 20px;
             margin: 0;
-            margin-bottom: 90vh; /* 保证最后一首歌能完美滚动到顶部 */
-        }
-
-        /* 悬浮控制按钮 */
-        .controls {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 1000;
-        }
-        button {
-            font-size: 14px;
-            padding: 6px 14px;
-            cursor: pointer;
-            background-color: #333333;
-            color: #ffffff;
-            border: 1px solid #666666;
-            border-radius: 4px;
-            opacity: 0.7;
-        }
-        button:hover { 
-            background-color: #555555; 
-            opacity: 1.0; 
-        }
-
-        /* 高亮文字（黄色） */
-        .yellow { color: #ffcc00; }
-
-        /* 主页菜单样式 */
-        #main-menu {
-            min-height: 80vh;
+            min-height: 90vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -58,256 +26,29 @@
         .song-link {
             display: block;
             color: #00bfff;
-            font-size: 40px;
+            font-size: 36px;
             margin: 15px 0;
             text-decoration: none;
+            padding: 10px 20px;
+            border: 1px solid #333333;
+            border-radius: 8px;
+            width: 80%;
+            max-width: 500px;
         }
-        .song-link:hover { text-decoration: underline; }
-
-        /* 歌词单曲区域 */
-        .song-section {
-            padding-top: 15vh;
-            margin-bottom: 40vh;
+        .song-link:hover {
+            background-color: #222222;
+            border-color: #00bfff;
         }
-        .back-btn {
-            display: inline-block;
-            font-size: 24px;
-            color: #888888;
-            text-decoration: none;
-            margin-top: 50px;
-            border: 1px solid #444444;
-            padding: 5px 15px;
-            border-radius: 4px;
-        }
-        .back-btn:hover { color: #ffffff; border-color: #888888; }
     </style>
 </head>
 <body>
 
-    <!-- 右上角悬浮自动滚动控制按钮 -->
-    <div class="controls">
-        <button id="scrollBtn" onclick="toggleScroll()">></button>
-    </div>
+    <div class="menu-title">万物赞颂歌 - 目录</div>
 
-    <!-- 1. 主页菜单区 -->
-    <div id="main-menu">
-        <div class="menu-title">万物赞颂歌 - 目录</div>
-        <a href="#song1" class="song-link" onclick="stopScroll()">1. 万物说</a>
-        <a href="#song2" class="song-link" onclick="stopScroll()">2. 耶稣的梦想</a>
-        <a href="#song3" class="song-link" onclick="stopScroll()">3. 愿祢受赞颂</a>
+    <!-- 点击打开对应的独立页面 -->
+    <a href="song1.html" class="song-link">1. 万物说</a>
+    <a href="song2.html" class="song-link">2. 耶稣的梦想</a>
+    <a href="song3.html" class="song-link">3. 愿祢受赞颂</a>
 
-    </div>
-
-    <!-- 2. 第一首：万物说 -->
-    <div id="song1" class="song-section">
-        <p>
-            <span class="yellow">耶稣的梦想</span><br>
-            词：高征财 | 曲：姜震<br>
-            出自：《万物赞颂歌》<br><br>
-            我自天父怀里来到世间。<br>
-            阿爸，父啊！<br>
-            是我最喜乐的祈祷。<br>
-            看到天上的飞鸟，<br>
-            是父的眷顾和爱；<br>
-            撒种的农夫，<br>
-            是父百倍的赐予；<br>
-            看到掘地的辛劳，<br>
-            是父深藏的宝贝；<br>
-            麦田的成熟，<br>
-            是我父期待的收成。<br><br>
-            我有天父要我实现的梦。<br>
-            阿爸，父啊！<br>
-            是我最温暖的祈祷。<br>
-            最微末的悔改者，<br>
-            在诉说天父的爱；<br>
-            渺小芥菜子，<br>
-            能成为天父的家；<br>
-            最谦卑的祈祷者，<br>
-            会彰显天父的义；<br>
-            慈心施惠者，<br>
-            映照出天父的美。<br><br>
-            阿爸，父啊！<br>
-            所有的事物都让我们体会祢的真实；<br>
-            所有的生命，<br>
-            引领我们归向祢的永恒。<br>
-            阿爸，父啊！<br>
-            我的心灵，梦的旅程，<br>
-            在祢的双手拥抱中，<br>
-            归回到祢在天上的园。<br>
-            归向祢的永恒。<br><br>
-            阿爸，父啊！阿爸，父啊！<br>
-            阿爸，父啊！阿爸，父啊！<br>
-            我有天父要我实现的梦。<br>
-            阿爸，父啊！<br>
-            是我最温暖的祈祷。
-        </p>
-        <a href="#main-menu" class="back-btn" onclick="stopScroll()">↑ 返回目录</a>
-    </div>
-
-    <!-- 3. 第二首 -->
-    <div id="song2" class="song-section">
-        <p>
-            <span class="yellow">耶稣的梦想</span><br>
-            词：高征财 | 曲：姜震<br>
-            出自：《万物赞颂歌》<br><br>
-            我自天父怀里来到世间。<br>
-            阿爸，父啊！<br>
-            是我最喜乐的祈祷。<br>
-            看到天上的飞鸟，<br>
-            是父的眷顾和爱；<br>
-            撒种的农夫，<br>
-            是父百倍的赐予；<br>
-            看到掘地的辛劳，<br>
-            是父深藏的宝贝；<br>
-            麦田的成熟，<br>
-            是我父期待的收成。<br><br>
-            我有天父要我实现的梦。<br>
-            阿爸，父啊！<br>
-            是我最温暖的祈祷。<br>
-            最微末的悔改者，<br>
-            在诉说天父的爱；<br>
-            渺小芥菜子，<br>
-            能成为天父的家；<br>
-            最谦卑的祈祷者，<br>
-            会彰显天父的义；<br>
-            慈心施惠者，<br>
-            映照出天父的美。<br><br>
-            阿爸，父啊！<br>
-            所有的事物都让我们体会祢的真实；<br>
-            所有的生命，<br>
-            引领我们归向祢的永恒。<br>
-            阿爸，父啊！<br>
-            我的心灵，梦的旅程，<br>
-            在祢的双手拥抱中，<br>
-            归回到祢在天上的园。<br>
-            归向祢的永恒。<br><br>
-            阿爸，父啊！阿爸，父啊！<br>
-            阿爸，父啊！阿爸，父啊！<br>
-            我有天父要我实现的梦。<br>
-            阿爸，父啊！<br>
-            是我最温暖的祈祷。
-        </p>
-
-        </p>
-        <a href="#main-menu" class="back-btn" onclick="stopScroll()">↑ 返回目录</a>
-    </div>
-
-    <!-- 4. 第三首 -->
-    <div id="song3" class="song-section">
-        <p>
-            <span class="yellow">愿你受赞颂</span><br><br>
-            <br>
-TB：天主圣父 <br>
-我们偕同万物<br>
-一起赞颂祢！<br>
-一起赞颂祢！<br>
-一切万物 <br>
-都出自祢，<br>
-全能有力的双手，<br>
-全能有力的双手。<br>
-<br>
-万物属于祢，<br>
-宇宙充满祢的临在，<br>
-祢温柔的爱<br>
-愿祢受赞颂 <br>
-愿祢受赞颂。<br>
-<br>
-SA：天主圣子，<br>
-万物在祢爱中，<br>
-和谐地形成，<br>
-和谐地形成。<br>
-拣选玛利亚作为母亲，<br>
-祢是我们的兄弟。<br>
-祢是我们的兄弟。<br>
-<br>
-祢爱的眼睛注视关照这个世界，<br>
-祢处处临在。<br>
-愿祢受赞颂 <br>
-愿祢受赞颂。<br>
-<br>
-Chorus<br>
-(合)  噢，<br>
-令人惊奇无限的爱！<br>
-教导我们，<br>
-在万物中默观祢的美；<br>
-万物都在说祢，<br>
-觉醒我们 因祢所做的一切，<br>
-赞颂祢 感谢祢<br>
-<br>
-SA: 天主圣神，<br> 
-<span class="yellow">TB: Woo ———— </span><br> 
-SA: 世界在祢光中，<br>
-<span class="yellow">------TB: Woo ———— </span><br> 
-
-SA: 走向天父的爱，<br>
-<span class="yellow">TB: Woo ———— </span><br> 
-SA: 走向天父的爱。<br>
-<span class="yellow">TB: Woo ———— </span><br> 
-SA: 偕同万物，<br>
-<span class="yellow">TB: Woo ———— </span><br> 
-SA: 结合我们，<br>
-<span class="yellow">TB: Woo ———— </span><br> 
-SA: 劳苦中共同期待，<br>
-<span class="yellow">TB: Woo ———— </span><br> 
-SA: 劳苦中共同期待。<br>
-<span class="yellow">TB: Woo ———— </span><br> 
-<br>
-(合)  <br>
-祢寓居我们，<br>
-激励生命实践真善美，<br>
-圣爱中生活，<br>
-愿祢受赞颂 <br>
-愿祢受赞颂。<br>
-<br>
-Chorus<br>
-(合）噢 <br>
-令人惊奇无限的爱！<br>
-教导我们，<br>
-在万物中默观祢的美；<br>
-万物都在说祢，<br>
-觉醒我们 因祢所做的一切，<br>
-赞颂祢 感谢祢 <br>
-<br>
-<br>
-Coda<br>
-SA：万物属于祢，宇宙充满祢的临在，<br>
-<span class="yellow">TB: ---------万物属于祢, 宇宙充满祢的临在，</span><br>
-祢温柔的爱<br>
-SA: 愿祢受赞颂 <span class="yellow">    TB: 愿你受赞颂</span><br>
-<br> 
-（合）愿祢受赞颂 ———<br>
-        </p>
-        <a href="#main-menu" class="back-btn" onclick="stopScroll()">↑ 返回目录</a>
-    </div>
-
-
-
-
-
-    <!-- 自动滚动逻辑控制脚本 -->
-    <script>
-        let scrollInterval = null;
-        let isScrolling = false;
-        const scrollSpeed = 1; // 滚动速度：数字越大越快
-
-        function toggleScroll() {
-            const btn = document.getElementById('scrollBtn');
-            if (isScrolling) {
-                stopScroll();
-            } else {
-                scrollInterval = setInterval(() => {
-                    window.scrollBy(0, scrollSpeed);
-                }, 30);
-                btn.innerText = "||";
-                isScrolling = true;
-            }
-        }
-
-        function stopScroll() {
-            clearInterval(scrollInterval);
-            document.getElementById('scrollBtn').innerText = ">";
-            isScrolling = false;
-        }
-    </script>
 </body>
 </html>
