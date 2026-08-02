@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>万物赞颂歌 - 歌词投影</title>
+    <style>
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: sans-serif;
+            font-size: 64px;
+            line-height: 1.8;
+            text-align: center;
+            padding: 40px 20px;
+            margin: 0;
+            margin-bottom: 90vh; /* 保证最后一首歌能完美滚动到顶部 */
+        }
+
+        /* 悬浮控制按钮 */
+        .controls {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        button {
+            font-size: 14px;
+            padding: 6px 14px;
+            cursor: pointer;
+            background-color: #333333;
+            color: #ffffff;
+            border: 1px solid #666666;
+            border-radius: 4px;
+            opacity: 0.7;
+        }
+        button:hover { 
+            background-color: #555555; 
+            opacity: 1.0; 
+        }
+
+        /* 高亮文字（黄色） */
+        .yellow { color: #ffcc00; }
+
+        /* 主页菜单样式 */
+        #main-menu {
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .menu-title {
+            font-size: 56px;
+            color: #aaaaaa;
+            margin-bottom: 40px;
+        }
+        .song-link {
+            display: block;
+            color: #00bfff;
+            font-size: 40px;
+            margin: 15px 0;
+            text-decoration: none;
+        }
+        .song-link:hover { text-decoration: underline; }
+
+        /* 歌词单曲区域 */
+        .song-section {
+            padding-top: 15vh;
+            margin-bottom: 40vh;
+        }
+        .back-btn {
+            display: inline-block;
+            font-size: 24px;
+            color: #888888;
+            text-decoration: none;
+            margin-top: 50px;
+            border: 1px solid #444444;
+            padding: 5px 15px;
+            border-radius: 4px;
+        }
+        .back-btn:hover { color: #ffffff; border-color: #888888; }
+    </style>
+</head>
+<body>
+
+    <!-- 右上角悬浮自动滚动控制按钮 -->
+    <div class="controls">
+        <button id="scrollBtn" onclick="toggleScroll()">></button>
+    </div>
+
+    <!-- 1. 主页菜单区 -->
+    <div id="main-menu">
+        <div class="menu-title">万物赞颂歌 - 目录</div>
+        <a href="#song1" class="song-link" onclick="stopScroll()">1. 耶稣的梦想</a>
+        <a href="#song2" class="song-link" onclick="stopScroll()">2. 第二首歌曲名</a>
+        <a href="#song3" class="song-link" onclick="stopScroll()">3. 第三首歌曲名</a>
+        <a href="#song4" class="song-link" onclick="stopScroll()">4. 第四首歌曲名</a>
+        <a href="#song5" class="song-link" onclick="stopScroll()">5. 第五首歌曲名</a>
+        <a href="#song6" class="song-link" onclick="stopScroll()">6. 第六首歌曲名</a>
+        <a href="#song7" class="song-link" onclick="stopScroll()">7. 第七首歌曲名</a>
+        <a href="#song8" class="song-link" onclick="stopScroll()">8. 第八首歌曲名</a>
+    </div>
+
+    <!-- 2. 第一首：耶稣的梦想 -->
+    <div id="song1" class="song-section">
+        <p>
+            <span class="yellow">耶稣的梦想</span><br>
+            词：高征财 | 曲：姜震<br>
+            出自：《万物赞颂歌》<br><br>
+            我自天父怀里来到世间。<br>
+            阿爸，父啊！<br>
+            是我最喜乐的祈祷。<br>
+            看到天上的飞鸟，<br>
+            是父的眷顾和爱；<br>
+            撒种的农夫，<br>
+            是父百倍的赐予；<br>
+            看到掘地的辛劳，<br>
+            是父深藏的宝贝；<br>
+            麦田的成熟，<br>
+            是我父期待的收成。<br><br>
+            我有天父要我实现的梦。<br>
+            阿爸，父啊！<br>
+            是我最温暖的祈祷。<br>
+            最微末的悔改者，<br>
+            在诉说天父的爱；<br>
+            渺小芥菜子，<br>
+            能成为天父的家；<br>
+            最谦卑的祈祷者，<br>
+            会彰显天父的义；<br>
+            慈心施惠者，<br>
+            映照出天父的美。<br><br>
+            阿爸，父啊！<br>
+            所有的事物都让我们体会祢的真实；<br>
+            所有的生命，<br>
+            引领我们归向祢的永恒。<br>
+            阿爸，父啊！<br>
+            我的心灵，梦的旅程，<br>
+            在祢的双手拥抱中，<br>
+            归回到祢在天上的园。<br>
+            归向祢的永恒。<br><br>
+            阿爸，父啊！阿爸，父啊！<br>
+            阿爸，父啊！阿爸，父啊！<br>
+            我有天父要我实现的梦。<br>
+            阿爸，父啊！<br>
+            是我最温暖的祈祷。
+        </p>
+        <a href="#main-menu" class="back-btn" onclick="stopScroll()">↑ 返回目录</a>
+    </div>
+
+    <!-- 3. 第二首 -->
+    <div id="song2" class="song-section">
+        <p>
+            <span class="yellow">第二首歌曲名</span><br><br>
+            这里粘贴第二首歌词...<br>
+            第二行...<br>
+        </p>
+        <a href="#main-menu" class="back-btn" onclick="stopScroll()">↑ 返回目录</a>
+    </div>
+
+    <!-- 4. 第三首 -->
+    <div id="song3" class="song-section">
+        <p>
+            <span class="yellow">第三首歌曲名</span><br><br>
+            这里粘贴第三首歌词...<br>
+        </p>
+        <a href="#main-menu" class="back-btn" onclick="stopScroll()">↑ 返回目录</a>
+    </div>
+
+    <!-- 5. 第四首 -->
+    <div id="song4" class="song-section">
+        <p><span class="yellow">第四首歌曲名</span><br><br>这里粘贴第四首歌词...</p>
+        <a href="#main-menu" class="back-btn" onclick="stopScroll()">↑ 返回目录</a>
+    </div>
+
+    <!-- 6. 第五首 -->
+    <div id="song5" class="song-section">
+        <p><span class="yellow">第五首歌曲名</span><br><br>这里粘贴第五首歌词...</p>
+        <a href="#main-menu" class="back-btn" onclick="stopScroll()">↑ 返回目录</a>
+    </div>
+
+    <!-- 7. 第六首 -->
+    <div id="song6" class="song-section">
+        <p><span class="yellow">第六首歌曲名</span><br><br>这里粘贴第六首歌词...</p>
+        <a href="#main-menu" class="back-btn" onclick="stopScroll()">↑ 返回目录</a>
+    </div>
+
+    <!-- 8. 第七首 -->
+    <div id="song7" class="song-section">
+        <p><span class="yellow">第七首歌曲名</span><br><br>这里粘贴第七首歌词...</p>
+        <a href="#main-menu" class="back-btn" onclick="stopScroll()">↑ 返回目录</a>
+    </div>
+
+    <!-- 9. 第八首 -->
+    <div id="song8" class="song-section">
+        <p><span class="yellow">第八首歌曲名</span><br><br>这里粘贴第八首歌词...</p>
+        <a href="#main-menu" class="back-btn" onclick="stopScroll()">↑ 返回目录</a>
+    </div>
+
+    <!-- 自动滚动逻辑控制脚本 -->
+    <script>
+        let scrollInterval = null;
+        let isScrolling = false;
+        const scrollSpeed = 1; // 滚动速度：数字越大越快
+
+        function toggleScroll() {
+            const btn = document.getElementById('scrollBtn');
+            if (isScrolling) {
+                stopScroll();
+            } else {
+                scrollInterval = setInterval(() => {
+                    window.scrollBy(0, scrollSpeed);
+                }, 30);
+                btn.innerText = "||";
+                isScrolling = true;
+            }
+        }
+
+        function stopScroll() {
+            clearInterval(scrollInterval);
+            document.getElementById('scrollBtn').innerText = ">";
+            isScrolling = false;
+        }
+    </script>
+</body>
+</html>
