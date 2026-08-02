@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>万物说</title>
+    <style>
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: sans-serif;
+            font-size: 64px;
+            line-height: 1.8;
+            text-align: center;
+            padding: 40px 20px;
+            margin-bottom: 80vh;
+        }
+        .controls { position: fixed; top: 20px; right: 20px; z-index: 1000; }
+        button {
+            font-size: 14px; padding: 6px 14px; cursor: pointer;
+            background-color: #333333; color: #ffffff;
+            border: 1px solid #666666; border-radius: 4px; opacity: 0.7;
+        }
+        button:hover { background-color: #555555; opacity: 1.0; }
+        .yellow { color: #ffcc00; }
+        .back-btn {
+            display: inline-block; font-size: 24px; color: #888888;
+            text-decoration: none; margin-top: 50px;
+            border: 1px solid #444444; padding: 8px 20px; border-radius: 4px;
+        }
+        .back-btn:hover { color: #ffffff; border-color: #888888; }
+    </style>
+</head>
+<body>
+
+    <div class="controls"><button id="scrollBtn" onclick="toggleScroll()">></button></div>
+
+    <p>
+        <span class="yellow">万物说</span><br>
+        出自：《万物赞颂歌》<br><br>
+        （在此替换《万物说》实际歌词）
+    </p>
+
+    <a href="index.html" class="back-btn">← 返回目录</a>
+
+    <script>
+        let scrollInterval = null, isScrolling = false, scrollSpeed = 1;
+        function toggleScroll() {
+            const btn = document.getElementById('scrollBtn');
+            if (isScrolling) {
+                clearInterval(scrollInterval); btn.innerText = ">"; isScrolling = false;
+            } else {
+                scrollInterval = setInterval(() => { window.scrollBy(0, scrollSpeed); }, 30);
+                btn.innerText = "||"; isScrolling = true;
+            }
+        }
+    </script>
+</body>
+</html>
