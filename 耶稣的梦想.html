@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Auto-Scrolling Lyrics</title>
+    <style>
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: sans-serif;
+            font-size: 64px;
+            line-height: 1.8;
+            padding: 40px;
+            margin-bottom: 80vh; /* Allows the last lines to scroll to the top */
+        }
+        .controls {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            
+        }
+       button {
+            font-size: 13px;        /* Reduced from 18px */
+            padding: 4px 10px;      /* Reduced from 8px 16px */
+            cursor: pointer;
+            background-color: #444444;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            opacity: 0.6;           /* Makes it slightly see-through so it is less distracting */
+        }
+        button:hover { 
+            background-color: #666666; 
+            opacity: 1.0;           /* Lights up fully when you hover over it */
+        }
+	.yellow { 
+            color: #ffcc00;
+    </style>
+</head>
+<body>
+
+    <div class="controls">
+        <button id="scrollBtn" onclick="toggleScroll()">></button>
+    </div>
+
+    <!-- PASTE YOUR LYRICS BELOW THIS LINE -->
+
+
+    <p>
+耶稣的梦想<br>
+词：高征财<br>
+曲：姜震<br>
+出自：《万物赞颂歌》<br>
+<br>
+我自天父怀里来到世间。<br>
+阿爸，父啊！<br>
+是我最喜乐的祈祷。<br>
+看到天上的飞鸟，<br>
+是父的眷顾和爱；<br>
+撒种的农夫，<br>
+是父百倍的赐予；<br>
+看到掘地的辛劳，<br>
+是父深藏的宝贝；<br>
+麦田的成熟，<br>
+是我父期待的收成。<br>
+<br>
+我有天父要我实现的梦。<br>
+阿爸，父啊！<br>
+是我最温暖的祈祷。<br>
+最微末的悔改者，<br>
+在诉说天父的爱；<br>
+渺小芥菜子，<br>
+能成为天父的家；<br>
+最谦卑的祈祷者，<br>
+会彰显天父的义；<br>
+慈心施惠者，<br>
+映照出天父的美。<br>
+<br>
+阿爸，父啊！<br>
+所有的事物都让我们体会祢的真实；<br>
+所有的生命，<br>
+引领我们归向祢的永恒。<br>
+阿爸，父啊！<br>
+我的心灵，梦的旅程，<br>
+在祢的双手拥抱中，<br>
+归回到祢在天上的园。<br>
+归向祢的永恒。<br>
+<br>
+阿爸，父啊！<br>
+阿爸，父啊！<br>
+阿爸，父啊！<br>
+阿爸，父啊！<br>
+我有天父要我实现的梦。<br>
+阿爸，父啊！<br>
+是我最温暖的祈祷。<br>
+<br>
+<br>
+
+    </p>
+    <!-- PASTE YOUR LYRICS ABOVE THIS LINE -->
+
+    <script>
+        let scrollInterval = null;
+        let isScrolling = false;
+        const scrollSpeed = 1; // Pixels per interval. Increase this number to scroll faster.
+
+        function toggleScroll() {
+            const btn = document.getElementById('scrollBtn');
+            if (isScrolling) {
+                clearInterval(scrollInterval);
+                btn.innerText = ">";
+                isScrolling = false;
+            } else {
+                scrollInterval = setInterval(() => {
+                    window.scrollBy(0, scrollSpeed);
+                }, 30); // Runs roughly every 30 milliseconds
+                btn.innerText = ">";
+                isScrolling = true;
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+
