@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>讚頌的路</title>
+    <style>
+        body {
+            background-color: #000000;  /* Black background */
+            color: #ffffff;
+            font-family: sans-serif;
+            font-size: 64px;
+            line-height: 1.8;
+            text-align: left;           /* Left-align lyrics text */
+            max-width: 900px;           /* Keeps text container centered on projection */
+            margin: 0 auto;
+            padding: 40px 20px;
+            margin-bottom: 80vh;
+        }
+        .controls { 
+            position: fixed; 
+            top: 20px; 
+            right: 20px; 
+            z-index: 1000; 
+        }
+        button {
+            font-size: 14px; 
+            padding: 6px 14px; 
+            cursor: pointer;
+            background-color: #333333; 
+            color: #ffffff;
+            border: 1px solid #666666; 
+            border-radius: 4px; 
+            opacity: 0.7;
+        }
+        button:hover { 
+            background-color: #555555; 
+            opacity: 1.0; 
+        }
+        .title { 
+            color: #ffcc00;            /* Yellow song title */
+            font-weight: bold;
+            font-size: 72px;
+        }
+        .section-tag {
+            color: #aaaaaa;
+            font-size: 40px;
+            margin-top: 30px;
+        }
+        .back-btn {
+            display: inline-block; 
+            font-size: 24px; 
+            color: #888888;
+            text-decoration: none; 
+            margin-top: 50px;
+            border: 1px solid #444444; 
+            padding: 8px 20px; 
+            border-radius: 4px;
+        }
+        .back-btn:hover { 
+            color: #ffffff; 
+            border-color: #888888; 
+        }
+    </style>
+</head>
+<body>
+
+    <div class="controls">
+        <button id="scrollBtn" onclick="toggleScroll()">></button>
+    </div>
+
+    <p>
+        <span class="title"> 讚頌的路</span><br><br>
+
+       
+詞｜高征財神父	<br>
+曲｜姜震<br>
+<br><br>
+貧窮的馬槽，<br>
+看見人類在天主生活的未來； <br>
+木匠的生活，<br>
+預見苦架要為人類捨棄生命；<br>
+曠野的試探，<br>
+鼓舞心靈向上提升的真生活；<br>
+鄉間的麥子，<br>
+知道生命藉著死亡將獲得收成。<br>
+迷失的羊群，<br>
+看見天父為愛而犧牲的善牧；<br>
+葡萄的果實，<br>
+預見在主內生活唯一的依靠；<br>
+麥餅的分享，<br>
+鼓舞人們彼此不足中的滿溢；<br>
+十字的愛情，<br>
+知道我們所有苦痛常有愛陪伴。<br>
+天主，<br>
+我在穹蒼高處探尋祢。 <br>
+祢卻在低處，<br>
+祢卻在低處等著我。<br>
+天主，<br>
+我在穹蒼高處探尋祢。 <br>
+祢卻在低處，<br>
+祢卻在低處等著我。<br>
+等著我。<br>
+主，天主，<br>
+教我在靈魂深處， <br>
+教我在靈魂深處遇見祢。<br>
+遇見祢。<br>
+<br>
+天主，<br>
+我在穹蒼高處探尋祢。 <br>
+祢卻在低處，<br>
+祢卻在低處等著我。<br>
+天主，<br>
+我在穹蒼高處探尋祢。 <br>
+祢卻在低處，<br>
+祢卻在低處等著我。<br>
+等著我，等著我，<br>
+等著我 ，與祢相遇。<br>
+<br>
+    </p>
+
+    <div style="text-align: center;">
+        <a href="index.html" class="back-btn">← 返回目錄</a>
+    </div>
+
+    <script>
+        let scrollInterval = null, isScrolling = false, scrollSpeed = 1;
+        function toggleScroll() {
+            const btn = document.getElementById('scrollBtn');
+            if (isScrolling) {
+                clearInterval(scrollInterval); 
+                btn.innerText = ">"; 
+                isScrolling = false;
+            } else {
+                scrollInterval = setInterval(() => { window.scrollBy(0, scrollSpeed); }, 30);
+                btn.innerText = "||"; 
+                isScrolling = true;
+            }
+        }
+    </script>
+</body>
+</html>
